@@ -1,0 +1,103 @@
+.header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0px;
+    height: 55px;
+    right: auto;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    background-color: #0973b9;
+  }
+.header__body {
+    height: 55px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+}
+.header__logo {
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #016087;
+}
+.header__logo .icon-logo {
+    margin-left: 10px;
+  }
+.header__logo .icon-left-header {
+  margin: 4px 0 0 12px;
+}
+
+.header__right-1 {
+  width: 212px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__restaurant {
+  background-color: #005082;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.menu--input{
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  width: 178px;
+  padding: 3px 5px;
+  cursor: text;
+}
+
+.menu--icon{
+  width: 22px;
+  height: 32px;
+}
+
+.header__right-2 {
+  height: 55px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.header__language {
+  background-color: #005082;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.user__setting {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 24px;
+}
+.user__setting .icon--arrow-down {
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+
+.user__setting .username {
+  padding: 0 5px;
+  font-size: 13px;
+  font-family: Tahoma;
+  color: #fff;
+}
+
+.user__setting .icon--avatar {
+  background-color: #fff;
+  border-radius: 12px;
+}

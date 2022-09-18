@@ -1,0 +1,213 @@
+.form--container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(10, 10, 10, 0.4) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+.popup--food-detail {
+    width: 750px;
+    height: 625px;
+    z-index: 100;
+    border-radius: 4px;
+    background-color: #0072bc;
+}
+.popup--food-inner {
+    margin: 5px;
+    background-color: #fff;
+    height: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+}
+.popup--food-header {
+    height: 20px;
+    padding-bottom: 5px;
+    padding-inline: 4px;
+    background-color: #0072bc;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+.popup--food-body {
+    padding: 8px;
+    flex: 1;
+    position: relative;
+}
+.popup--food-tab {
+    width: 100%;
+    height: 28px;
+    background-color: #f2f2f2;
+    display: flex;
+}
+.tab--option {
+    padding: 5px 8px;
+    border-inline: 1px solid transparent;
+    border-top: 2px solid transparent;
+    cursor: pointer;
+}
+.tab--option:hover {
+    background-color: rgba(127, 199, 227, 0.4);
+    border-inline-color: #d3d3d3;
+    border-top-color: #005082;
+}
+.tab--option.selected, .tab--option.selected:hover {
+    background-color: #fff;
+    border-inline-color: #d3d3d3;
+    border-top-color: #0072bc;
+    color: #0072bc;
+}
+.popup--food-content {
+    padding-top: 8px;
+}
+.popup--food-content-1 {
+    display: flex;
+}
+.content-1-left {
+    flex: 1;
+    margin-right: 8px;
+    margin-top: 7px;
+}
+.content-1-right {
+    width: 210px;
+}
+fieldset {
+    margin: 0;
+    border: 1px solid #afafaf;
+    padding: 0 8px 8px;
+}
+.avatar {
+    display: flex;
+    margin-top: 4px;
+}
+.image--avatar {
+    width: 160px;
+    height: 160px;
+}
+.image--avatar img{
+    object-fit: contain;
+}
+.image--text {
+    font-size: 12px;
+    text-align: center;
+}
+.image--button {
+    margin-left: 4px;
+    flex: 1;
+}
+.btn--image {
+    padding: 3px;
+    height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+.btn--image:hover,
+.btn--image:focus {
+    background-color: #e4f2ea;
+    border-color: #0072bc;
+}
+
+.field--data {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.field--data-label {
+    min-width: 120px;
+    width: 120px;
+    padding-right: 5px;
+}
+.popup--food-footer {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer--right {
+    display: flex;
+}
+.footer--right .button {
+    margin-left: 8px;
+}
+.content-2-header {
+    margin-bottom: 4px;
+}
+.content-2-info {
+    display: flex;
+}
+.content-2-info-message {
+    padding-left: 8px;
+    font-style: italic;
+}
+.content-2-body {
+    width: auto;
+    height: 246px;
+    border: 1px solid #c1c1c1;
+    overflow: auto;
+}
+.table-service-hobby {
+    border-spacing: 0;
+    min-width: 100%;
+    overflow: unset;
+    position: relative;
+}
+.table-service-hobby thead {
+    position: sticky;
+    top: 0;
+}
+.table-service-hobby thead td {
+    text-align: center;
+    border-bottom: 1px solid #c1c1c1;
+    background-color: #ededed;
+    min-height: 29px;
+    margin: 0;
+    padding: 0;
+}
+.table-service-hobby thead td div{
+    padding: 7px 10px;
+}
+.table-service-hobby thead td div:hover{
+    background-color: #eef6fb;
+    cursor: default;
+}
+.table-service-hobby thead td:last-child {
+    border-left: 1px solid #c1c1c1;
+}
+.table-service-hobby tbody td:last-child {
+    border-left: 1px solid #c1c1c1;
+}
+.table-service-hobby tbody tr:hover{
+    background-color: #e2eff8;
+}
+.table-service-hobby tbody td {
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #c1c1c1;
+    width: fit-content;
+}
+.table-service-hobby tbody tr:nth-child(even) input{
+    background-color: #fafafa;
+}
+.table-service-hobby tbody tr:nth-child(even){
+    background-color: #fafafa;
+}
+.content-2-footer {
+    margin-top: 2px;
+    display: flex;
+}
+.content-2-footer .button{
+    margin-right: 4px;
+}

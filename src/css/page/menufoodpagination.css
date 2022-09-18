@@ -1,0 +1,58 @@
+.paginate {
+    border: 1px solid #c1c1c1;
+    border-top: none;
+    height: 29px;
+    color: #333f49;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+.paginate--left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.paginate--text {
+    padding: 4px;
+    margin-right: 8px;
+    cursor: default;
+}
+.paginate--icon {
+    padding: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+.paginate--icon:hover {
+    border: 1px solid #c1c1c1;
+}
+.paginate--icon:active {
+    border: 1px solid #0973b9;
+    background-color: #c1c1c1;
+}
+.paginate--icon.disabled {
+    opacity: 0.6;
+    cursor: default;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+.paginate--right {
+    padding: 0 4px;
+    margin-right: 8px;
+}
+.paginate input {
+    max-width: 24px;
+}
+.separator-horizontal {
+    border-left: 1px solid #ccc;
+    height: 14px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.paginate .combobox {
+    width: fit-content !important;
+    margin-left: 30px;
+  }
