@@ -18,7 +18,8 @@
                 Trang
             </div>
             <form @submit="changePageNumber">
-                <base-input v-model="pageIndex"
+                <base-input v-model="pageNumber"
+                type="number"
                 />
             </form>
             <div class="paginate--text">
@@ -100,7 +101,6 @@ export default {
     watch: {
         pageIndex(newVal) {
             this.pageNumber = newVal
-            console.log(newVal, this.pageNumber);
         },
         totalRecord(newVal) {
             if(newVal == 0) {
@@ -125,6 +125,7 @@ export default {
         changePageSize(item) {
             this.pageIndex = 1
             this.updatePageSize(item.pageSizeName)
+            this.updatePageIndex(1)
             this.loadFoodPaging()
         },
         /**

@@ -182,10 +182,10 @@ fieldset {
     background-color: #eef6fb;
     cursor: default;
 }
-.table-service-hobby thead td:last-child {
+.table-service-hobby thead td:nth-child(2) {
     border-left: 1px solid #c1c1c1;
 }
-.table-service-hobby tbody td:last-child {
+.table-service-hobby tbody td:nth-child(2) {
     border-left: 1px solid #c1c1c1;
 }
 .table-service-hobby tbody tr:hover{
@@ -197,6 +197,9 @@ fieldset {
     padding: 0;
     border-bottom: 1px solid #c1c1c1;
     width: fit-content;
+}
+.table-service-hobby tbody td .combobox{
+    width: calc(100% - 2px);
 }
 .table-service-hobby tbody tr:nth-child(even) input{
     background-color: #fafafa;
@@ -210,4 +213,7 @@ fieldset {
 }
 .content-2-footer .button{
     margin-right: 4px;
+}
+.textarea {
+    font-family: Tahoma;
 }

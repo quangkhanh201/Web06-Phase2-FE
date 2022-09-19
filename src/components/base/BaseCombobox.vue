@@ -80,7 +80,7 @@
                 <div class="item--name">
                     {{item[`${table}Name`]}}
                 </div>
-                <div class="item--fee">
+                <div align="right" class="item--fee">
                     {{item[`Fee`]}}
                 </div>
             </li>
@@ -89,7 +89,6 @@
 </template>
 
 <script>
-
 export default {
     props: [
         "listItem", // Danh sách item trong combobox
@@ -338,7 +337,6 @@ export default {
             str = str.replace(/!|@|%|\^|\*|\(|\)|\+|=|<|>|\?|\/|,|\.|:|;|'|"|&|#|\[|\]|~|\$|_|`|-|{|}|\||\\/g, " ")
             return str
         },
-
     },
     mounted() {
         if(this.value && !this.selectedItem && this.listItem.length != 0) {

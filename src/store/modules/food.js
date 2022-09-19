@@ -12,7 +12,7 @@ const state= {
     sortType: "DESC", // sắp cếp theo kiểu nào
     filterObjects: [], // Mảng chứa dữ liệu lọc
     selectedFood: {}, // Món ăn được chọn
-    toltalRecord: 0, // tổng số bản ghi sau khi lọc
+    totalRecord: 0, // tổng số bản ghi sau khi lọc
     totalPage: 0, // tổng số trang
     isLoadingFood: false, // trạng thái hiển thị loading
     formMode: enums.formMode.Add, // trạng thái làm việc của form
@@ -31,7 +31,7 @@ const mutations = {
     },
     INSERT_FOOD(state, payload) {
         state.foods.unshift(payload)
-        state.toltalRecord++
+        state.totalRecord++
         if(state.storageMode == enums.storageMode.Save) {
             state.isShowFoodDetail = false
         }
@@ -42,7 +42,7 @@ const mutations = {
         }
     },
     UPDATE_FOOD(state, payload) {
-        state.foods.map((food) => {
+        state.foods = state.foods.map((food) => {
             if(food.FoodId == payload.FoodId){
                 return payload
             }
@@ -60,7 +60,7 @@ const mutations = {
     },
     DELETE_FOOD(state, payload) {
         state.foods = state.foods.filter((food) => food.FoodId !== payload)
-        state.toltalRecord--
+        state.totalRecord--
     },
     UPDATE_SORT_OBJECT(state, payload) {
         state.sortBy = payload.sortBy

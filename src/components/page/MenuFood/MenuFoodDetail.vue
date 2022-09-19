@@ -185,7 +185,7 @@
                                 <table class="table-service-hobby">
                                     <thead>
                                         <tr>
-                                            <td style="width: 480px"><div>Sở thích phục vụ</div></td>
+                                            <td style="width: 483px"><div>Sở thích phục vụ</div></td>
                                             <td style="width: 240px"><div>Thu thêm</div></td>
                                         </tr>
                                     </thead>
@@ -310,8 +310,8 @@ export default {
             focusField: "FoodName", // trường focus
             foodServiceHobbySelected: 0, // bản ghi sở thích phục vụ được chọn
             serverLink: "", //link server backend
-            emptyImg: "", // link ảnh trống
-            imageFile: "", // file ảnh
+            emptyImg: null, // link ảnh trống
+            imageFile: null, // file ảnh
             menuTop: 0, // vị trí contextmenu trong bảng sở thích phục vụ
             menuLeft: 0, // vị trí contextmenu trong bảng sở thích phục vụ
             isShowContextMenuHobby: false // trangj thái hiển thị contextmenu trong bảng sở thích phục vụ
@@ -320,6 +320,7 @@ export default {
     computed: mapState({
         selectedFood: (state) => state.food.selectedFood,
         formMode: (state) => state.food.formMode,
+        storageMode: (state) => state.food.storageMode,
         groups: (state) => state.foodGroup.groups,
         units: (state) => state.foodUnit.units,
         processedPlaces: (state) => state.processedPlace.processedPlaces,
@@ -370,7 +371,6 @@ export default {
         }
         // Lấy link server
         this.serverLink = constants.API_URL
-        
     },
     methods: {
         ...mapActions([
@@ -385,6 +385,7 @@ export default {
             "loadAllProcessedPlace",
             "loadAllHobby",
             "loadFoodPaging",
+            "loadDataPaging"
         ]),
         /**
          * Thực hiện đóng form chi tiết
@@ -462,7 +463,6 @@ export default {
          * CreatedBy: PQKHANH(15/09/2022)
          */
         async getNewCode(val) {
-            console.log(val);
             if(val) {
                 const res = await axios.get(`${constants.API_URL}/api/${constants.API_VERSION}/Foods/NewCode?name=${val}`)
                 if(res.data.Success) {
@@ -619,19 +619,20 @@ export default {
                 this.emptyImg = this.$refs.imagePreview.src
                 URL.revokeObjectURL(this.$refs.imagePreview.src)
                 this.$refs.imagePreview.src = URL.createObjectURL(file)
-                this.imageFile = file
+                this.imageFile = file         
             }
-
         },
         /**
          * Thực hiện bỏ ảnh đẫ chọn
          * CreatedBy: PQKHANH(15/09/2022)
          */
         clickRevokeImage() {
-            URL.revokeObjectURL(this.$refs.imagePreview.src)
-            this.$refs.imagePreview.src = this.emptyImg
-            this.currentFood.ImageUrl = null
-            this.imageFile = null
+            if(this.currentFood.ImageUrl) {
+                URL.revokeObjectURL(this.$refs.imagePreview.src)
+                this.$refs.imagePreview.src = this.emptyImg
+                this.currentFood.ImageUrl = null        
+                this.imageFile = null
+            }
         },
         /**
          * Thực hiện gọi api uploaad ảnh 

@@ -198,6 +198,7 @@ export default {
         clickConfirmDelete() {
             this.isShowDeleteDialog = false
             this.deleteFood(this.selectedFood.FoodId)
+            this.loadFoodPaging()
         },
         /**
          * click đóng form xóa bản ghi

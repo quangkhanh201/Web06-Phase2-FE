@@ -42,17 +42,13 @@
     background-color: #fff;
     box-shadow: rgb(136 136 136) 0px 3px 10px -3px;
     border-radius: 2px;
+    font-size: 12px;
   }
   
-  .combobox--list,
-  .combobox--list-table {
+  .combobox--list {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .combobox--item-table {
-    border: 1px solid #c1c1c1;
   }
   
   .combobox--item {
@@ -68,6 +64,18 @@
     cursor: pointer;
   }
   
+  .table--title {
+    background-color: #ededed;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .combobox--list-table {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
   .combobox--item-table {
     border-bottom: 1px solid #c1c1c1;
     display: flex;
@@ -75,10 +83,11 @@
     align-items: center;
   }
   
-  .table--title {
+  .title--table {
     background-color: #ededed;
     font-weight: 600;
     text-align: center;
+    cursor: default !important;
   }
   
   .combobox--item-table:last-child {
@@ -99,6 +108,10 @@
     padding: 0 6px;
   }
   
+  .combobox--item-table {
+    border: 1px solid #c1c1c1;
+  }
+
   .combobox.hide--border {
     border-color: transparent;
   }

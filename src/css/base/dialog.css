@@ -66,10 +66,12 @@
   .dialog--footer .button {
     padding-left: 6px;
   }
-  .button-popup {
-    width: 75px;
+  .button--popup {
+    min-width: 75px;
     height: 25px;
-    
+    justify-content: center;
+    margin-left: 6px;
   }
+
 
   
